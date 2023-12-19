@@ -3,32 +3,29 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import FrontPage from './components/frontPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import frontPage from './components/frontPage';
-import catalogue from './components/catalogue';
+import Catalogue from './components/catalogue';
+import EditCatalogue from './components/editCatalogue';
 
 function App() {
   return (
     <BrowserRouter>
       <div className="App">
 
-        <Navbar bg="primary" data-bs-theme="dark">
+        <Navbar bg="success" data-bs-theme="dark">
           <Container>
-            <Navbar.Brand href="/">Navbar</Navbar.Brand>
+            <Navbar.Brand href="/">Home</Navbar.Brand>
             <Nav className="me-auto">
-              {/* href changes url */}
-              <Nav.Link href="/">Home</Nav.Link>
-              <Nav.Link href="create">Create</Nav.Link>
-              <Nav.Link href="read">Read</Nav.Link>
+              <Nav.Link href="catalogue">Catalogue</Nav.Link>
+              <Nav.Link href="editCatalogue">Edit Catalogue</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
         <Routes>
-          {/* accessed via components folder and hrefs above */}
-          <Route path='/' element={<Content></Content>}></Route>
-          <Route path='/create' element={<Create></Create>}></Route>
-          <Route path='/read' element={<Read></Read>}></Route> {/*displays an array of data / imgs using json*/}
-          <Route path='/edit/:id' element={<Edit></Edit>}></Route>
+          <Route path='/' element={<FrontPage></FrontPage>}></Route>
+          <Route path='/catalogue' element={<Catalogue></Catalogue>}></Route>
+          <Route path='/editCatalogue' element={<EditCatalogue></EditCatalogue>}></Route>
         </Routes>
       </div>
     </BrowserRouter>
