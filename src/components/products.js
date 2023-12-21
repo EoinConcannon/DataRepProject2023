@@ -8,7 +8,8 @@ function ItemDisplay(props) {
                 <Card.Body>
                     <img src={props.item.displayImg}></img>
                     <footer>
-                        <p>{props.item.price}</p>
+                        <p>Price: €{props.item.price}</p>
+                        <p>In Stock: {props.item.stock}</p>
                     </footer>
                 </Card.Body>
             </Card>

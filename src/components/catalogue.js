@@ -1,16 +1,12 @@
-import Items from "./items";
+import Items from "./products";
 
 function Catalogue() {
     const data = [
         {
             "productName": "Example Item",
-            "displayImg": "https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg",
-            "price": 171999999999.99
-        },
-        {
-            "productName": "Example Item",
-            "displayImg": "https://m.media-amazon.com/images/M/MV5BYTNlOGZhYzgtMmE3OC00Y2NiLWFhNWQtNzg5MjRhNTJhZGVmXkEyXkFqcGdeQXVyNzg5MzIyOA@@._V1_.jpg",
-            "price": 171999999999.99
+            "displayImg": "https://imageio.forbes.com/specials-images/imageserve/5bb22ae84bbe6f67d2e82e05/0x0.jpg?format=jpg&crop=1012,1013,x627,y129,safe&height=416&width=416&fit=bounds",
+            "price": 171999999999.99,
+            "stock": 1
         }
     ];
 

@@ -1,9 +1,11 @@
+import Items from "./products"
 
 function EditCatalogue() {
 
     return (
         <div>
-            <h1>work in progress</h1>
+            <h3>Edit</h3>
+            {/* {<Items itemList={data}></Items>} */}
         </div>
     );
 }

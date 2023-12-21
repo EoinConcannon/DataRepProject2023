@@ -13,7 +13,7 @@ function App() {
     <BrowserRouter>
       <div className="App">
 
-        <Navbar bg="success" data-bs-theme="dark">
+        <Navbar bg="warning" data-bs-theme="light">
           <Container>
             <Navbar.Brand href="/">Home</Navbar.Brand>
             <Nav className="me-auto">
