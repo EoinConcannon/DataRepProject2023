@@ -34,6 +34,18 @@ const productSchema = new mongoose.Schema({
 
 const productModel = mongoose.model('products', productSchema);
 
+app.post('/api/products', (req, res) => {// Create
+    console.log(req.body);
+    productModel.create({
+        productName: req.body.productName,
+        displayImg: req.body.displayImg,
+        price: req.body.price,
+        stock: req.body.stock
+    })
+        .then(() => { res.send("Product Added"); })
+        .catch(() => { res.send(error); })
+})
+
 app.get('/api/products', async (req, res) => { // Read
     let products = await productModel.find({});
     res.json(products);

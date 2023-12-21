@@ -7,6 +7,7 @@ import FrontPage from './components/frontPage';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Catalogue from './components/catalogue';
 import EditCatalogue from './components/editCatalogue';
+import AddProducts from './components/addProducts';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Nav className="me-auto">
               <Nav.Link href="catalogue">Catalogue</Nav.Link>
               <Nav.Link href="editCatalogue">Edit Catalogue</Nav.Link>
+              <Nav.Link href="addProducts">Add Products</Nav.Link>
             </Nav>
           </Container>
         </Navbar>
@@ -26,6 +28,7 @@ function App() {
           <Route path='/' element={<FrontPage></FrontPage>}></Route>
           <Route path='/catalogue' element={<Catalogue></Catalogue>}></Route>
           <Route path='/editCatalogue' element={<EditCatalogue></EditCatalogue>}></Route>
+          <Route path='/addProducts' element={<AddProducts></AddProducts>}></Route>
         </Routes>
       </div>
     </BrowserRouter>

@@ -42,4 +42,5 @@ function Catalogue() { // Read
         </div>
     );
 }
+
 export default Catalogue;

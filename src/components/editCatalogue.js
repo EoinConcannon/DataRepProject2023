@@ -9,4 +9,5 @@ function EditCatalogue() {
         </div>
     );
 }
+
 export default EditCatalogue;

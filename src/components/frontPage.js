@@ -6,4 +6,5 @@ function FrontPage() {
         </div>
     );
 }
+
 export default FrontPage;
