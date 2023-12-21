@@ -34,6 +34,10 @@ const productSchema = new mongoose.Schema({
 
 const productModel = mongoose.model('products', productSchema);
 
+app.get('/api/products', async (req, res) => { // Read
+    let products = await productModel.find({});
+    res.json(products);
+});
 
 app.listen(port, () => {
     console.log(`Connection Successful: using port ${port}`) // use command "node server.js"
