@@ -1,15 +1,15 @@
 import { Card } from 'react-bootstrap';
 
-function ItemDisplay(props) {
+function ProductDisplay(props) {
     return (
         <div>
             <Card>
-                <Card.Header>{props.item.productName}</Card.Header>
+                <Card.Header>{props.product.productName}</Card.Header>
                 <Card.Body>
-                    <img src={props.item.displayImg}></img>
+                    <img src={props.product.displayImg}></img>
                     <footer>
-                        <p>Price: €{props.item.price}</p>
-                        <p>In Stock: {props.item.stock}</p>
+                        <p>Price: €{props.product.price}</p>
+                        <p>In Stock: {props.product.stock}</p>
                     </footer>
                 </Card.Body>
             </Card>
@@ -17,12 +17,12 @@ function ItemDisplay(props) {
     );
 }
 
-function Items(props) {
-    return props.itemList.map(
-        (i) => {
-            return <ItemDisplay item={i}></ItemDisplay>
+function Products(props) {
+    return props.productList.map(
+        (p) => {
+            return <ProductDisplay product={p}></ProductDisplay>
         }
     );
 }
 
-export default Items;
+export default Products;

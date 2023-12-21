@@ -1,4 +1,4 @@
-import Items from "./products";
+import Products from "./products";
 
 function Catalogue() {
     const data = [
@@ -13,7 +13,7 @@ function Catalogue() {
     return (
         <div>
             <h3>Catalogue</h3>
-            {<Items itemList={data}></Items>}
+            {<Products productList={data}></Products>}
         </div>
     );
 }
