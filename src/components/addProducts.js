@@ -18,11 +18,11 @@ function AddProducts() {
             stock: stock
         });
 
-        axios.post("http://localhost:3202/api/products", product)
+        axios.post("http://localhost:3202/api/products", product) // sends new product to database
             .then()
             .catch();
     }
-    return (
+    return ( // displayed when user clicks "Add Products" on the navbar
         <div>
             <form onSubmit={addToDatabase}>
                 <div className="form-group">

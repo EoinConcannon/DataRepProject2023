@@ -38,7 +38,8 @@ function Catalogue() { // Read
     return (
         <div>
             <h3>Catalogue</h3>
-            {<Products productList={data} Reload={ReloadData}></Products>}
+            {<Products productList={data} Reload={ReloadData}></Products>} 
+            {/* productList displayed using products.js */}
         </div>
     );
 }
