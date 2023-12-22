@@ -26,8 +26,8 @@ function Update(props) {
                 console.log(error);
             })
     }, []);// empty array prevents repeating
-    const updateData = (event) => {
-        event.preventDefault();
+    const updateData = (e) => {
+        e.preventDefault();
         const updateProduct = {
             _id: id,
             productName: productName,

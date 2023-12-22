@@ -52,8 +52,6 @@ app.get('/api/products', async (req, res) => { // Read
 });
 
 app.get('/api/product/:id', async (req, res) => {
-    console.log(req.params.id);
-
     let product = await productModel.findById({ _id: req.params.id })
     res.send(product);
 })
@@ -62,6 +60,13 @@ app.put('/api/product/:id', async (req, res) => { // Update
     console.log("Updated: " + req.params.id);
 
     let product = await productModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.send(product);
+})
+
+app.delete('/api/product/:id', async (req, res) => { // Delete
+    console.log("Deleted: " + req.params.id);
+
+    let product = await productModel.findByIdAndDelete(req.params.id)
     res.send(product);
 })
 

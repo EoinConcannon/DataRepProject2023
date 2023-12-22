@@ -1,5 +1,7 @@
 import { Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import axios from 'axios';
 
 function EditProductDisplay(props) {
     return (
@@ -15,6 +17,16 @@ function EditProductDisplay(props) {
                     </footer>
                 </Card.Body>
                 <Link to={"/update/" + props.product._id} className='btn btn-warning'>Edit Product</Link>
+                {/* update not displaying */}
+                <Button variant='danger' onClick={
+                    (e) => {
+                        axios.delete("http://localhost:3202/api/product/" + props.product._id)
+                            .then((res) => {
+                                let reload = props.reload();
+                            })
+                            .catch();
+                    }
+                }>Delete</Button>
             </Card>
         </div>
     );
@@ -23,7 +35,7 @@ function EditProductDisplay(props) {
 function EditProducts(props) {
     return props.productList.map(
         (p) => {
-            return <EditProductDisplay product={p}></EditProductDisplay>
+            return <EditProductDisplay product={p} key={p._id} reload={()=>{props.Reload();}}></EditProductDisplay>
         }
     );
 }
