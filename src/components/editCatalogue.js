@@ -38,7 +38,8 @@ function EditCatalogue() { // same GUI as catalogue.js except can update/delete 
     return (
         <div>
             <h3>Editing Catalogue</h3>
-            {<EditProducts productList={data} Reload={ReloadData}></EditProducts>} 
+            {<EditProducts productList={data} Reload={ReloadData}></EditProducts>}
+            {/* productList displayed using EditProducts() from editProduct.js */}
         </div>
     );
 }

@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Catalogue from './components/catalogue';
 import EditCatalogue from './components/editCatalogue';
 import AddProducts from './components/addProducts';
+import Update from './components/update';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path='/catalogue' element={<Catalogue></Catalogue>}></Route>
           <Route path='/editCatalogue' element={<EditCatalogue></EditCatalogue>}></Route>
           <Route path='/addProducts' element={<AddProducts></AddProducts>}></Route>
+          <Route path='/update/:id' element={<Update></Update>}></Route>
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3202
+const port = 3202 // this is 2023 backwards
 
 const cors = require('cors');
 app.use(cors());
@@ -20,7 +20,7 @@ const mongoose = require('mongoose');
 
 main().catch(err => console.log(err));
 
-async function main() {
+async function main() { // connects to MongoDB database cluster
     await mongoose.connect('mongodb+srv://admin:admin@cluster1.hxfrhia.mongodb.net/?retryWrites=true&w=majority');//access the database from mongodb (replace <password> with the actual password)
 }
 
@@ -51,7 +51,7 @@ app.get('/api/products', async (req, res) => { // Read
     res.json(products);
 });
 
-app.get('/api/product/:id', async (req, res) => {
+app.get('/api/product/:id', async (req, res) => { // Read one by ID
     let product = await productModel.findById({ _id: req.params.id })
     res.send(product);
 })

@@ -38,13 +38,13 @@ function Update(props) {
         axios.put('http://localhost:3202/api/product/' + id, updateProduct)
             .then((res) => {
                 console.log(res.data);
-                navigate('/editCatalogue');
+                navigate('/editCatalogue'); // returns user to "Edit Catalogue" page
             })
             .catch((error) => {
                 console.log(error);
             });
     }
-    return (
+    return ( // similar display to addProducts.js
         <div>
             <form onSubmit={updateData}>
                 <div className="form-group">

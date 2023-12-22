@@ -39,7 +39,7 @@ function Catalogue() { // Read
         <div>
             <h3>Catalogue</h3>
             {<Products productList={data} Reload={ReloadData}></Products>} 
-            {/* productList displayed using products.js */}
+            {/* productList displayed using Products() from products.js */}
         </div>
     );
 }

@@ -44,6 +44,7 @@ function ProductDisplay(props) {
             });
     }
     */
+    // purchase not working
     return (
         <div>
             <Card>
@@ -62,7 +63,7 @@ function ProductDisplay(props) {
     );
 }
 
-function Products(props) {
+function Products(props) { // gets data from function above
     return props.productList.map(
         (p) => {
             return <ProductDisplay product={p}></ProductDisplay>
