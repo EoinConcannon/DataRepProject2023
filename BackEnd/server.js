@@ -51,6 +51,20 @@ app.get('/api/products', async (req, res) => { // Read
     res.json(products);
 });
 
+app.get('/api/product/:id', async (req, res) => {
+    console.log(req.params.id);
+
+    let product = await productModel.findById({ _id: req.params.id })
+    res.send(product);
+})
+
+app.put('/api/product/:id', async (req, res) => { // Update
+    console.log("Updated: " + req.params.id);
+
+    let product = await productModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.send(product);
+})
+
 app.listen(port, () => {
     console.log(`Connection Successful: using port ${port}`) // use command "node server.js"
 })

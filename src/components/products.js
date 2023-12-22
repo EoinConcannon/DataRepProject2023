@@ -10,6 +10,7 @@ function ProductDisplay(props) {
                     <footer>
                         <p>Price: €{props.product.price}</p>
                         <p>In Stock: {props.product.stock}</p>
+                        <p>Product ID: {props.product._id}</p>
                     </footer>
                 </Card.Body>
             </Card>

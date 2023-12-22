@@ -11,10 +11,10 @@ function EditProductDisplay(props) {
                     <footer>
                         <p>Price: €{props.product.price}</p>
                         <p>In Stock: {props.product.stock}</p>
+                        <p>Product ID: {props.product._id}</p>
                     </footer>
                 </Card.Body>
-                <Link to={"/.../" + props.product._id} className='btn btn-warning'>Edit</Link>
-                {/* create update js file */}
+                <Link to={"/update/" + props.product._id} className='btn btn-warning'>Edit Product</Link>
             </Card>
         </div>
     );
